@@ -1,0 +1,138 @@
+/* The MIT License (MIT) - Copyright (c) 2013 Dan Hsiao/Soldsie */
+
+html {
+  -webkit-transition: margin-top 0.25s linear;
+}
+
+#smart-banner {
+  position: absolute; left: 0; top: 0; z-index:11111;
+  width: 100%; height:83px; line-height: 1.25;
+  font-family:'Helvetica Neue', Helvetica, sans-serif;
+  /*background: -webkit-linear-gradient(top, #fff 0%,#ccc 100%);*/
+  background: #f2f2f2; border-bottom: 1px solid #E1E0E0;
+  -webkit-transition: margin-top 0.25s linear;
+}
+
+#smart-banner .close {
+  float: left; display: block;
+  width: 11px; height: 10px; margin: 37px 9px;
+  background-image: url('/assets/ticker/ios7_close@2x.png');
+  filter: alpha(opacity=50); opacity: 0.5;
+  background-size: 11px 10px; background-repeat: no-repeat;
+}
+#smart-banner .close:active {
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+#smart-banner img.app-icon {
+  float: left; display: block; width: 64px; height: 64px;
+  margin: 10px 8px 10px 0; border-radius: 14px;
+}
+
+#smart-banner .info-table {
+  position: relative; display: table; height: 82px; padding-top: 1px;
+  color: #666; font-size: 11px; font-weight: bold;
+}
+
+#smart-banner .info-table .info-cell {
+  display: table-cell; vertical-align: middle;
+}
+
+#smart-banner .info-table .app-name {
+  display: block;
+  color: #000; font-size: 13.5px; font-weight: normal; line-height: 1.2em;
+  font-family: 'Helvetica Neue', Helvetica;
+  /*white-space: nowrap; overflow: hidden; text-overflow: ellipsis;*/
+}
+
+#smart-banner .info-table .artist-name,
+#smart-banner .info-table .price {
+  color: #303030; font-size: 12px; font-weight: normal; line-height: 17px;
+}
+
+#smart-banner .info-table .price span.price-value {
+  text-transform: uppercase;
+}
+
+#smart-banner .rating {
+  display: inline-block; width: 50px; height: 8px; margin: 1px 0;
+  background-image: url('/assets/ticker/sprite_appstore_stars.png');
+  background-size: 98px 18px; background-repeat: no-repeat;
+}
+#smart-banner .stars50 { background-position: 0 0; }
+#smart-banner .stars40 { background-position: -10px 0; }
+#smart-banner .stars30 { background-position: -20px 0; }
+#smart-banner .stars20 { background-position: -30px 0; }
+#smart-banner .stars10 { background-position: -40px 0; }
+#smart-banner .stars0  { background-position: -50px 0; }
+#smart-banner .stars5  { background-position: -40px -9px; }
+#smart-banner .stars15 { background-position: -30px -9px; }
+#smart-banner .stars25 { background-position: -20px -9px; }
+#smart-banner .stars35 { background-position: -10px -9px; }
+#smart-banner .stars45 { background-position: 0 -9px; }
+
+#smart-banner .info-table .review-count {
+  display: inline-block; position: relative; top: -1px;
+  color: #888; font-weight: normal; line-height: 8px;
+}
+
+#smart-banner .banner-action {
+  float: right; display: inline-block; width: auto; height: 25px;
+  padding: 0 10px; margin: 29px 5px; text-align: center;
+  color: #037BFF; font-size: 18px; font-weight: normal; line-height: 24px;
+}
+
+#smart-banner .banner-action:active {
+  color: rgba(3,123,255,0.3);
+}
+
+/* Desktop Banner */
+
+#desktop-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 11111;
+  display: block; width: 100%; height: 60px;
+  background-color: rgba(0,0,0,0.8); color: #fff;
+}
+
+#desktop-banner .close {
+  float: left; display: block; margin: 14px 8px;
+  color: #ccc; font-size: 35px; font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+#desktop-banner .text {
+  display: inline-block; margin: 20px 0 0 5px; font-size: 22px;
+}
+#desktop-banner .text .prompt { display: inline; }
+#desktop-banner .text a { color: #78B4DB; }
+
+#desktop-banner a.app-badge {
+  float: right; margin: 10px; width: 135px; height: 40px;
+  background-image: url('/assets/ticker/app_store_badge.png');
+  background-repeat: no-repeat;
+}
+
+
+/* Debugging */
+
+#debug-info {
+  position: fixed; z-index: 11111; bottom: 0; right: 0; padding: 8px;
+  color: #18c370; background-color: rgba(0,0,0,0.8); font-size: 11px;
+}
+
+#debug-info.desktop-banner { bottom: 60px; border-bottom: 1px solid #fff; }
+
+
+/* Responsive Styling */
+
+@media (max-width: 639px) {
+  #desktop-banner .close { top: 20px; }
+  #desktop-banner .text { font-size: 20px; margin-top: 21px; }
+  #desktop-banner a.app-badge { display: none; }
+}
+
+@media (max-width: 479px) {
+  #desktop-banner .text { font-size: 16px; line-height: 20px; margin-top: 12px; }
+  #desktop-banner .text .prompt { display: block; }
+}
