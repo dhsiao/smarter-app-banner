@@ -16,7 +16,7 @@ html {
 #smart-banner .close {
   float: left; display: block;
   width: 11px; height: 10px; margin: 37px 9px;
-  background-image: url('/assets/ticker/ios7_close@2x.png');
+  background-image: url('/imgs/ios7_close@2x.png');
   filter: alpha(opacity=50); opacity: 0.5;
   background-size: 11px 10px; background-repeat: no-repeat;
 }
@@ -57,7 +57,7 @@ html {
 
 #smart-banner .rating {
   display: inline-block; width: 50px; height: 8px; margin: 1px 0;
-  background-image: url('/assets/ticker/sprite_appstore_stars.png');
+  background-image: url('/imgs/sprite_appstore_stars.png');
   background-size: 98px 18px; background-repeat: no-repeat;
 }
 #smart-banner .stars50 { background-position: 0 0; }
@@ -109,7 +109,7 @@ html {
 
 #desktop-banner a.app-badge {
   float: right; margin: 10px; width: 135px; height: 40px;
-  background-image: url('/assets/ticker/app_store_badge.png');
+  background-image: url('/imgs/app_store_badge.png');
   background-repeat: no-repeat;
 }
 
